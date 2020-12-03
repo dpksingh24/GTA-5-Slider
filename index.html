@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTA 5 Slider</title>
+</head>
+<body>
+    <html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Responsive GTA V Slider</title>
+    <meta author="Eduard Mayer">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<section class="pen">
+		<div class="stage">
+			<div class="element michael"></div>
+			<div class="element franklin"></div>
+			<div class="element trevor"></div>
+		</div>
+	</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+$('.element').each(function() {
+    $(this).mouseover(function() {
+        $(this).addClass('active');
+      $('.stage').children('.element').not('.active').addClass('inactive');
+    });
+    $(this).mouseleave(function() {
+        $(this).removeClass('active');
+        $('.stage').children('.element').not('.active').removeClass('inactive');
+    });
+});
+
+</script>
+</body>
+</html>
